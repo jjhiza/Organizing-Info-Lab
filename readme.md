@@ -35,3 +35,9 @@ An **intelliJ project** called ChallengeQuestions has been provided for you that
 #### Deliverable
 
 The completed Java file with solutions to the questions.
+
+---
+
+## Licensing
+1. All content is licensed under a CC­BY­NC­SA 4.0 license.
+2. All software code is licensed under GNU GPLv3. For commercial use or alternative licensing, please contact [legal@ga.co](mailto:legal@ga.co).
