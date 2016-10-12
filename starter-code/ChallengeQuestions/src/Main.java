@@ -17,6 +17,16 @@ public class Main {
      */
     public static int[] findLargestAndSmallest(int array[]){
 
+        int smallest = array[0];
+        int largest = array[0];
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] > largest)
+                largest = array[i];
+            else if (array[i] < smallest)
+                smallest = array[i];
+        }
+        int[]smallLargeNums = {smallest, largest};
+        return smallLargeNums;
     }
 
 
@@ -32,6 +42,35 @@ public class Main {
      * @return Sum of the two largest values
      */
     public static int sumOfTwoLargest(List intList){
+
+        if (intList.isEmpty()) {
+            return 0;
+        } else {
+            if (intList.size() == 1) {
+                return intList.get(0);
+            } else {
+                int highest = intList.get(0);
+
+                for (int i = 1; i < intList.size(); i++) {
+                    if (intList.get(i) > highest) {
+                        highest = intList.get(1);
+
+                    }
+
+                    for (i = 0; i < intList.size(); i++) {
+                        if (intList.get(i).equals(highest)) {
+                            intList.remove(i--);
+                        }
+                    }
+
+                    int nextHighest = 0;
+                    for (i = 1; i < intList.size(); i++) {
+                        if (intList.get(i) > nextHighest) {
+                            nextHighest = intList.get(i);
+                        }
+                        return highest + nextHighest;
+                    }
+
 
     }
 
@@ -51,6 +90,15 @@ public class Main {
      * @return A List of Integers that doesn't contain duplicates.
      */
     public static List removeDuplicatesFromList(List intList){
+
+                LinkedList<Integer> removeX = new LinkedList<>();
+
+                removeX.addAll(intList);
+                intList.clear();
+                intList.addAll(removeX);
+                return intList;
+
+            }
 
     }
 
